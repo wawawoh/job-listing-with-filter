@@ -1,3 +1,4 @@
+import "../src/joblisting.css";
 function JobListing({
   image,
   company,
@@ -8,35 +9,35 @@ function JobListing({
   contract,
   location,
   tools,
+  addToFilter,
 }) {
   const featuredChecker = () => {
     if (featured) {
-      return <h4>Featured</h4>;
+      return <h4 className="featured">Featured</h4>;
     }
   };
   const newChecker = () => {
     if (newJob) {
-      return <h4>New</h4>;
+      return <h4 className="new">New</h4>;
     }
   };
 
   return (
-    <section>
-      <div>
-        <div>
+    <section className="job-wrapper">
+      <div className="job-information">
+        <div className="image">
           <img src={image} alt="" />
         </div>
-        <div>
-          <div>
+        <div className="job-details">
+          <div className="top-details">
             <h3> {company}</h3>
-
-            {featuredChecker()}
             {newChecker()}
+            {featuredChecker()}
           </div>
-          <div>
+          <div className="level">
             <h2>{level}</h2>
           </div>
-          <div>
+          <div className="bottom-details">
             <span>{posted}</span>
             &bull;
             <span>{contract}</span>
@@ -45,9 +46,13 @@ function JobListing({
           </div>
         </div>
       </div>
-      <div>
+      <div className="job-tools">
         {tools.map((tool) => {
-          return <button key={tool}>{tool}</button>;
+          return (
+            <button onClick={() => addToFilter(tool)} key={tool}>
+              {tool}
+            </button>
+          );
         })}
       </div>
     </section>

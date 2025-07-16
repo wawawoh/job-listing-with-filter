@@ -1,0 +1,44 @@
+.job-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: green; */
+   
+
+
+}
+.job-information {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.level {
+    align-self: flex-start;
+}
+.job-details {
+    display: flex;
+    flex-direction: column;
+}
+.top-details {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 2em;
+    
+}
+.bottom-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.new, .featured{
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 2rem;
+    font-size:0.8rem ;
+    padding: 0.3em;
+}
+.featured {
+    margin-left: -2em;
+    background-color: hsl(180, 14%, 20%);
+}
