@@ -1,0 +1,58 @@
+.filterList {
+    max-width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    position: relative;
+    bottom:4em;
+    background-color: white;
+    box-shadow: 2px 4px 20px -3px rgba(91,164,164,0.61);
+-webkit-box-shadow: 2px 4px 20px -3px rgba(91,164,164,0.61);
+-moz-box-shadow: 2px 4px 20px -3px rgba(91,164,164,0.61);
+padding: 1rem;
+border-radius: 1em;
+
+    
+    
+}
+.filterList-Actual {
+    display: flex;
+    gap:1rem;
+
+}
+.actualFilters {
+     
+    border: none;
+    color: hsl(180, 29%, 42%);
+    background: none;
+    
+    /* border-radius: 0.5em; */
+    display: flex;
+    align-items: center;
+    /* gap: 1em; */
+    .filt-name {
+        padding: 0.5rem;
+        
+        
+        background-color: hsl(180, 38%, 92%);
+        border-radius: 1em 0 0 1em;
+    }
+    .cross{
+        background-color: hsl(180, 29%, 42%);
+        color: white;
+        border-radius: 0 1em 1em 0;
+        align-self: stretch;
+        padding: 0.5rem;
+        
+        /* border-radius: 1em; */
+    }
+}
+.clearButton {
+    border: none;
+    background: none;
+    color: hsl(180, 29%, 42%);
+
+}
+button {
+    cursor: pointer;
+}

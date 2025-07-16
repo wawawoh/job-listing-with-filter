@@ -23,7 +23,7 @@ function JobListing({
   };
 
   return (
-    <section className="job-wrapper">
+    <section className={featured ? "job-wrapper special" : "job-wrapper"}>
       <div className="job-information">
         <div className="image">
           <img src={image} alt="" />
@@ -49,7 +49,11 @@ function JobListing({
       <div className="job-tools">
         {tools.map((tool) => {
           return (
-            <button onClick={() => addToFilter(tool)} key={tool}>
+            <button
+              className="tools"
+              onClick={() => addToFilter(tool)}
+              key={tool}
+            >
               {tool}
             </button>
           );

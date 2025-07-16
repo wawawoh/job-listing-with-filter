@@ -65,6 +65,8 @@ function App() {
 
         console.log("this is the finished filter", filter);
       }
+    } else {
+      setDisplayedList(data);
     }
   }, [filter]);
 
@@ -78,6 +80,7 @@ function App() {
   const removeFilter = (removedFilter) => {
     // flter the array, takes prev and only filters if index of the current is not equal to the removed filter
     setFilter((prev) => prev.filter((_, index) => index !== removedFilter));
+    setDisplayedList([]);
   };
   const clear = () => {
     setFilter([]);
@@ -113,9 +116,9 @@ function App() {
           <img src="/images/bg-header-desktop.svg" alt="" />
         </picture>
       </header>
-      <section>
-        <FilterList filter={filter} removeFilter={removeFilter} clear={clear} />
-      </section>
+
+      <FilterList filter={filter} removeFilter={removeFilter} clear={clear} />
+
       <ul className="job-board">{loaded ? displayData() : "loadingghgf"}</ul>
     </>
   );
