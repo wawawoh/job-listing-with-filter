@@ -46,6 +46,7 @@ function JobListing({
           </div>
         </div>
       </div>
+      {screen.width < 980 && <hr />}
       <div className="job-tools">
         {tools.map((tool) => {
           return (

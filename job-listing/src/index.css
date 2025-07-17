@@ -83,3 +83,9 @@ header {
   padding: 0;
   list-style: none;
 }
+@media screen and (max-width:980px) {
+  .job-board {
+    gap: 4rem;
+  }
+  
+}
